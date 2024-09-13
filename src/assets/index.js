@@ -30,6 +30,26 @@ import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 
+import snotes from "./company/snotes.png";
+import calendar from "./company/calendar.png";
+import analytic from "./company/analytic.png";
+import paper_airplane from "./company/paper-airplane.png";
+import smart_notes from "./smart_notes.png";
+import asinc from "./asinc.png";
+import trashit from "./trashit.png";
+import otu from "./otu.png";
+import python from "./tech/python.svg";
+import java from "./tech/java.png";
+import aws from "./tech/aws.png";
+import azure from "./tech/azure.png";
+import django from "./tech/django.png";
+import rest from "./tech/rest.png";
+import scikit from "./tech/scikit.png";
+import tensorflow from "./tech/tensorflow.png";
+import flask from "./tech/flask.svg";
+
+
+
 
 export {
   logo,
@@ -60,4 +80,21 @@ export {
   carrent,
   jobit,
   tripguide,
+  snotes,
+  calendar,
+  analytic,
+  paper_airplane,
+  smart_notes,
+  asinc,
+  trashit,
+  otu,
+  python,
+  java,
+  aws,
+  azure,
+  django,
+  rest,
+  scikit,
+  tensorflow,
+  flask
 };
