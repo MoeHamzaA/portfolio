@@ -135,7 +135,7 @@ const experiences = [
   {
     title: "Smart Notes",
     company_name: "Startup",
-    icon: "src/assets/company/snotes.png",
+    icon: snotes,
     iconBg: "#383E56",
     date: "Aug 2024 - Sept 2024",
     points: [
@@ -148,7 +148,7 @@ const experiences = [
   {
     title: "Automated Daily Summary Script",
     company_name: "Personal",
-    icon: "src/assets/company/calendar.png",
+    icon: calendar,
     iconBg: "#383E56",
     date: "Aug 2024 - Aug 2024",
     points: [
@@ -161,7 +161,7 @@ const experiences = [
   {
     title: "Spotify Data Analysis Web Application",
     company_name: "Personal",
-    icon: "src/assets/company/analytic.png",
+    icon: analytic,
     iconBg: "#E6DEDD",
     date: "May 2024 - May 2024",
     points: [
@@ -174,7 +174,7 @@ const experiences = [
   {
     title: "AirHub Booking Agency Application",
     company_name: "Project for ISU",
-    icon: "src/assets/company/paper-airplane.png",
+    icon: paper_airplane,
     iconBg: "#E6DEDD",
     date: "Mar 2023 - Mar 2023",
     points: [
@@ -194,7 +194,7 @@ const testimonials = [
     name: "Ontario Tech U",
     designation: "Fall 2023",
     company: "",
-    image: "src/assets/otu.png",
+    image: otu,
   },
   
   // {
@@ -234,7 +234,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: "src/assets/smart_notes.png",
+    image: smart_notes,
     source_code_link: "https://github.com/MoeHamzaA/Smart-Notes.git",
   },
   {
@@ -255,7 +255,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: "src/assets/asinc.png",
+    image: asinc,
     source_code_link: "https://github.com/MoeHamzaA/Asinc.git",
   },
   {
@@ -276,7 +276,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: "src/assets/trashit.png",
+    image: trashit,
     source_code_link: "https://trash-it.azurewebsites.net/",
   },
 ];
