@@ -23,6 +23,23 @@ import {
   jobit,
   tripguide,
   threejs,
+  snotes,
+  calendar,
+  analytic,
+  paper_airplane,
+  smart_notes,
+  asinc,
+  trashit,
+  otu,
+  python,
+  java,
+  aws,
+  azure,
+  django,
+  rest,
+  scikit,
+  tensorflow,
+  flask,
 } from "../assets";
 
 export const navLinks = [
@@ -74,31 +91,31 @@ const technologies = [
   },
   {
     name: "TypeScript",
-    icon: "src/assets/tech/python.svg",
+    icon: python,
   },
   {
     name: "React JS",
-    icon: "src/assets/tech/java.png",
+    icon: java,
   },
   {
     name: "Redux Toolkit",
-    icon: "src/assets/tech/aws.png",
+    icon: aws,
   },
   {
     name: "Tailwind CSS",
-    icon: "src/assets/tech/azure.png",
+    icon: azure,
   },
   {
     name: "Node JS",
-    icon: "src/assets/tech/django.png",
+    icon: django,
   },
   {
     name: "MongoDB",
-    icon: "src/assets/tech/flask.svg",
+    icon: flask,
   },
   {
     name: "Three JS",
-    icon: "src/assets/tech/rest.png",
+    icon: rest,
   },
   {
     name: "git",
@@ -106,11 +123,11 @@ const technologies = [
   },
   {
     name: "figma",
-    icon: "src/assets/tech/scikit.png",
+    icon: scikit,
   },
   {
     name: "docker",
-    icon: "src/assets/tech/tensorflow.png",
+    icon: tensorflow,
   },
 ];
 
