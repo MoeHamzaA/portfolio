@@ -261,7 +261,7 @@ const projects = [
   {
     name: "Trash It",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "An Azure-integrated app that analyzes photos to identify objects and instantly tells you whether they’re recyclable, helping you make sustainable choices.",
     tags: [
       {
         name: "Django",
