@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 
 import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
+import { socialLinks } from "../constants";
+import { GitHubIcon, LinkedInIcon } from "./SocialIcons";
 
 const TypingText = ({ text, className, coloredText, coloredClassName }) => {
   const [displayText, setDisplayText] = useState("");
@@ -60,20 +62,72 @@ const Hero = () => {
           <div className='w-1 sm:h-80 h-40 violet-gradient' />
         </div>
 
-        <div>
-          <h1 className={`${styles.heroHeadText} text-white`}>
+        <motion.div 
+          className='relative z-10'
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, type: "spring" }}
+        >
+          <motion.h1 
+            className={`${styles.heroHeadText} text-white`}
+            initial={{ opacity: 0, y: -30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
             <TypingText 
               text="Hi, I'm " 
               className="text-white"
               coloredText="Hamza"
               coloredClassName="text-[#915EFF]"
             />
-          </h1>
-          <p className={`${styles.heroSubText} mt-2 text-white-100`}>
+          </motion.h1>
+          <motion.p 
+            className={`${styles.heroSubText} mt-2 text-white-100`}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
             I specialize in backend development, AI-driven solutions <br className='sm:block hidden' />
             machine learning models, and cloud-based systems
-          </p>
-        </div>
+          </motion.p>
+          
+          {/* Social Links */}
+          <motion.div 
+            className='mt-6 flex gap-4'
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+          >
+            {socialLinks.map((social, index) => (
+              <motion.a
+                key={social.name}
+                href={social.url}
+                target='_blank'
+                rel='noopener noreferrer'
+                initial={{ opacity: 0, scale: 0 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ 
+                  duration: 0.5, 
+                  delay: 0.8 + index * 0.1,
+                  type: "spring",
+                  stiffness: 200
+                }}
+                whileHover={{ 
+                  scale: 1.2,
+                  rotate: [0, -10, 10, -10, 0],
+                  transition: { duration: 0.5 }
+                }}
+                whileTap={{ scale: 0.9 }}
+                className='w-10 h-10 rounded-full bg-tertiary flex items-center justify-center hover:bg-[#915EFF] transition-colors duration-300 cursor-pointer z-20 relative'
+                aria-label={social.name}
+              >
+                <div className='w-5 h-5 text-white flex items-center justify-center pointer-events-none'>
+                  {social.iconType === "github" ? <GitHubIcon className="w-5 h-5" /> : <LinkedInIcon className="w-5 h-5" />}
+                </div>
+              </motion.a>
+            ))}
+          </motion.div>
+        </motion.div>
       </div>
 
       <ComputersCanvas />

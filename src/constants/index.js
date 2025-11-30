@@ -15,10 +15,6 @@ import {
   git,
   figma,
   docker,
-  meta,
-  starbucks,
-  tesla,
-  shopify,
   carrent,
   jobit,
   tripguide,
@@ -54,6 +50,19 @@ export const navLinks = [
   {
     id: "contact",
     title: "Contact",
+  },
+];
+
+export const socialLinks = [
+  {
+    name: "GitHub",
+    iconType: "github",
+    url: "https://github.com/MoeHamzaA",
+  },
+  {
+    name: "LinkedIn",
+    iconType: "linkedin",
+    url: "https://www.linkedin.com/in/hamza-ajmal-166a8228b/",
   },
 ];
 
@@ -135,7 +144,7 @@ const experiences = [
   {
     title: "Software Developer",
     company_name: "AthenaGuard",
-    icon: meta, // Using meta icon as placeholder
+    icon: "/company_logo/athenaguards_logo.jpeg",
     iconBg: "#383E56",
     date: "May 2025 - Present",
     points: [
@@ -148,7 +157,7 @@ const experiences = [
   {
     title: "Cloud Engineer",
     company_name: "Vosyn",
-    icon: shopify, // Using shopify icon as placeholder
+    icon: "/company_logo/vosyn_logo.jpeg",
     iconBg: "#E6DEDD",
     date: "April 2025 - June 2025",
     points: [
@@ -162,7 +171,7 @@ const experiences = [
   {
     title: "Software Engineer",
     company_name: "Wouessi Digital",
-    icon: tesla, // Using tesla icon as placeholder
+    icon: "/company_logo/wouessi_logo.jpeg",
     iconBg: "#383E56",
     date: "January 2025 - March 2025",
     points: [
@@ -175,7 +184,7 @@ const experiences = [
   {
     title: "Cloud Engineer",
     company_name: "Santek Micro Solutions",
-    icon: starbucks, // Using starbucks icon as placeholder
+    icon: "/company_logo/santek_micro_solutions_inc_logo.jpeg",
     iconBg: "#E6DEDD",
     date: "January 2024 - December 2024",
     points: [
@@ -215,51 +224,99 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Smart Notes",
+    name: "Elva – Alzheimer's Aid App",
     description:
-      "An AI-powered study tool that enhances your notes with video content, generates flashcards, and offers personalized learning support.",
+      "🥉 3rd Place Winner at HackHive 2025. AI-powered web application that assists individuals with Alzheimer's and dementia by recognizing familiar faces and identifying everyday objects using computer vision.",
     tags: [
       {
-        name: "Django",
+        name: "Python",
         color: "blue-text-gradient",
       },
       {
-        name: "Flask API",
+        name: "Flask",
         color: "green-text-gradient",
       },
       {
-        name: "Machine Learning",
+        name: "AI/ML",
         color: "pink-text-gradient",
       },
-    ],
-    image: smart_notes,
-    source_code_link: "https://github.com/MoeHamzaA/Smart-Notes.git",
-  },
-  {
-    name: "Asinc Texting Assistant",
-    description:
-      "script combining multiple APIs to send you a concise morning SMS with your daily schedule, weather update, and task list, ensuring a well-organized start to your day",
-    tags: [
       {
-        name: "APIIntegration",
+        name: "OpenCV",
         color: "blue-text-gradient",
       },
       {
-        name: "Automation",
+        name: "Computer Vision",
         color: "green-text-gradient",
+      },
+    ],
+    image: smart_notes, // Placeholder - will need to add elva image
+    source_code_link: "https://github.com/MoeHamzaA/Elva", // Placeholder - user will provide
+    live_demo_link: "", // Placeholder - user will provide
+    featured: true, // Top 3
+    award: "🥉 3rd Place - HackHive 2025",
+  },
+  {
+    name: "CloudPulse-AI – Cloud & Drift Monitoring",
+    description:
+      "Go-based observability system monitoring AI model health and system metrics with 92% drift detection accuracy. Features automated CI/CD, infrastructure-as-code, and AWS CloudWatch integration.",
+    tags: [
+      {
+        name: "Go",
+        color: "blue-text-gradient",
       },
       {
         name: "AWS",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Docker",
         color: "pink-text-gradient",
       },
+      {
+        name: "Terraform",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "MLOps",
+        color: "green-text-gradient",
+      },
     ],
-    image: asinc,
-    source_code_link: "https://github.com/MoeHamzaA/Asinc.git",
+    image: backend, // Placeholder - will need cloud monitoring image
+    source_code_link: "https://github.com/MoeHamzaA/CloudPulse-AI", // Placeholder - user will provide
+    live_demo_link: "", // Placeholder - user will provide
+    featured: true, // Top 3
+  },
+  {
+    name: "Smart Notes",
+    description:
+      "AI-powered study tool that converts lecture videos into organized, searchable notes using multithreaded transcription. Features flashcard generation and AI-powered chat support with Gemini AI.",
+    tags: [
+      {
+        name: "Python",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Flask",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Speech Recognition",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "FFmpeg",
+        color: "blue-text-gradient",
+      },
+    ],
+    image: smart_notes,
+    source_code_link: "https://github.com/MoeHamzaA/Smart-Notes",
+    live_demo_link: "", // Placeholder - user will provide
+    featured: true, // Top 3
   },
   {
     name: "Trash It",
     description:
-      "An Azure-integrated app that analyzes photos to identify objects and instantly tells you whether they’re recyclable, helping you make sustainable choices.",
+      "🏆 HackHive 2024 Winning Project. Full-stack containerized CV app on Azure that analyzes photos to identify recyclable objects using OpenCV and Azure Computer Vision APIs.",
     tags: [
       {
         name: "Django",
@@ -270,12 +327,104 @@ const projects = [
         color: "green-text-gradient",
       },
       {
-        name: "ObjectDetection",
+        name: "Docker",
         color: "pink-text-gradient",
+      },
+      {
+        name: "OpenCV",
+        color: "blue-text-gradient",
       },
     ],
     image: trashit,
-    source_code_link: "https://trash-it.azurewebsites.net/",
+    source_code_link: "https://github.com/MoeHamzaA/Trash-It", // Placeholder - user will provide
+    live_demo_link: "https://trash-it.azurewebsites.net/",
+    featured: false,
+    award: "🏆 HackHive 2024 Winner",
+  },
+  {
+    name: "Cloud Monitoring - Anomaly Detection",
+    description:
+      "Scalable ML-powered cloud monitoring solution detecting anomalies in real-time resource usage using Isolation Forest algorithm. Features AWS SageMaker, Lambda, and automated SNS alerts.",
+    tags: [
+      {
+        name: "AWS",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Python",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Machine Learning",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "SageMaker",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Lambda",
+        color: "green-text-gradient",
+      },
+    ],
+    image: backend, // Placeholder
+    source_code_link: "https://github.com/MoeHamzaA/Cloud-Monitoring-Anomaly-Detection",
+    live_demo_link: "", // Placeholder
+    featured: false,
+  },
+  {
+    name: "TxtAgenda – Daily Summarizer",
+    description:
+      "Automated Python script that aggregates daily schedule, tasks, and weather from multiple APIs (Cronofy, Notion, OpenWeather) and delivers formatted summaries via SMS using Twilio.",
+    tags: [
+      {
+        name: "Python",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "APIs",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Automation",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "AWS",
+        color: "blue-text-gradient",
+      },
+    ],
+    image: asinc,
+    source_code_link: "https://github.com/MoeHamzaA/Asinc", // Same as TxtAgenda
+    live_demo_link: "", // Placeholder
+    featured: false,
+  },
+  {
+    name: "Spotify Data Analysis",
+    description:
+      "Flask-based web application integrated with Spotify Web API for comprehensive music data analysis. Features artist search, playlist comparison, and similarity calculations.",
+    tags: [
+      {
+        name: "Flask",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Spotify API",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Data Analysis",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Python",
+        color: "blue-text-gradient",
+      },
+    ],
+    image: web, // Placeholder
+    source_code_link: "https://github.com/MoeHamzaA/Spotify-Analysis", // Placeholder
+    live_demo_link: "", // Placeholder
+    featured: false,
   },
 ];
 

@@ -5,12 +5,20 @@ import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { services } from "../constants";
 import { SectionWrapper } from "../hoc";
-import { fadeIn, textVariant } from "../utils/motion";
+import { fadeIn, textVariant, staggerContainer, scaleIn } from "../utils/motion";
 
 const ServiceCard = ({ index, title, icon }) => (
   <Tilt className='xs:w-[250px] w-full'>
     <motion.div
-      variants={fadeIn("right", "spring", index * 0.5, 0.75)}
+      variants={scaleIn(index * 0.1, 0.6)}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.3 }}
+      whileHover={{ 
+        scale: 1.05,
+        rotate: [0, -5, 5, -5, 0],
+        transition: { duration: 0.5 }
+      }}
       className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'
     >
       <div
@@ -21,15 +29,23 @@ const ServiceCard = ({ index, title, icon }) => (
         }}
         className='bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col'
       >
-        <img
+        <motion.img
           src={icon}
           alt='web-development'
           className='w-16 h-16 object-contain'
+          whileHover={{ 
+            rotate: 360,
+            scale: 1.2,
+            transition: { duration: 0.6 }
+          }}
         />
 
-        <h3 className='text-white text-[20px] font-bold text-center'>
+        <motion.h3 
+          className='text-white text-[20px] font-bold text-center'
+          whileHover={{ scale: 1.1 }}
+        >
           {title}
-        </h3>
+        </motion.h3>
       </div>
     </motion.div>
   </Tilt>
@@ -90,11 +106,17 @@ const About = () => {
       </div>
 
       {/* Services Section */}
-      <div className='mt-20 flex flex-wrap gap-10'>
+      <motion.div 
+        className='mt-20 flex flex-wrap gap-10'
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.25 }}
+        variants={staggerContainer(0.1, 0.1)}
+      >
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}
-      </div>
+      </motion.div>
     </>
   );
 };
